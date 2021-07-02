@@ -1,0 +1,114 @@
+:root{/*usado para separa as cores da indentidade visual na pag*/
+    /*um recurso  para utilizar variavel*/
+   --vermelho: #e50914;
+   --preto:#141414;
+}
+
+*{ /*zerando toda a pagina sobre bordas e margens*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*base principal*/
+body{
+  background: var(--preto);
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+}
+
+header .container{ /*pegando uma class dentro do header*/
+   display: flex; /*Alinhando os elemetos dentro dessa div na mesma linha*/
+   flex-direction: row;
+   align-items: center; /*centralizando os textos ao lado do netflix*/
+   justify-content:space-between; /*um espaçamento dos elementos para esquerda*/
+  /*justify-content:space-around;  serve para espaçamento central e nas duas laterais ficar com espaços*/
+   
+}
+
+header .logo{
+    color: var(--vermelho); /*usando variavel do root*/
+    font-family: 'Arial Black', Times, serif;
+    font-size: 40px;
+    margin-left: 5px;
+    
+}
+
+header nav a{
+    text-decoration: none; /*retira sublinhados*/
+    color: #aaa;
+    margin-right: 10px; /*separação lateral pra direita*/
+    
+}
+
+header nav a:hover{ /*toda vez que o mouse passar em cima mudar a cor*/
+    color:#fff;
+}
+
+/*filme principal*/
+
+.filme-principal{
+     
+    font-size: 16px;     /*linear-gradient serve para dar uma tonalidade mais escura a imagem e ressaltar texto*/
+    background:linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('../img/capa-naruto.jpg');
+    
+    
+    height: 400px; /*altura da imagem*/
+    background-size: cover; /*serve para dizer o tam da img e cover para dizer que quer cobertura completa da caixa*/
+    
+    display: flex; /*sempre vai padronizar em LINHA*/
+    flex-direction: column;/*inverter os eixos*/
+    justify-content: center; /*centraliza no meio da pag*/
+    align-items: flex-start; /*começarem da esquerda pra direita ISSO QUANDO SE TEM A INVERSÃO DE EIXOS, SE NAO ESTARIA NA PARTE SUPERIOR DIREITA*/
+    
+}
+
+.filme-principal .descricao{ /*pegando a distancia da sinopse para os botões*/
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+
+.filme-principal .titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS';
+}
+
+.botao{
+    background-color: rgba(0, 0, 0, .50);
+    border: none;
+    color: white;
+
+    padding: 15px 30px; /*espaçamento do elemento dentro da caixa*/
+    margin-right: 15px;
+    font-size: 12px;
+    
+    cursor: pointer; 
+    transition: .5s ease all; /*uma transição de cor um pouco mais lenta e moderna*/
+} 
+
+.botao:hover{ /*toda vez que passar o mouse troca a cor*/
+
+    background-color: white;
+    color: black;
+}
+
+.botao i{
+    margin-right: 7px; /*espaçamento dos incones de play e info*/
+}
+
+.container{ /*com uma class geral onde engloba todos os elementos facilita a movimentação de todos os elementos de uma vez só*/
+
+    margin-left: 20px;
+}
+
+.filme-principal .container{
+
+    width:70%;
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
